@@ -1,5 +1,8 @@
 package labTerminalB;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Driver {
 	/*
 	 * TODO 1	10 Marks
@@ -10,13 +13,15 @@ public class Driver {
 	 * 		"TODO 'TASK NUMBER' Complete" e.g. in this case "TODO 1 COMPLETED"
 	 */
 	public static void main(String[] args) {
+		
 		String input = "The <b>Good</b>, the <i>Bad</i>, and the <strong>Ugly</strong>";
-	//	String regex = "TODO1";
-	String 	regex=" ([A-Z]{4})\\,([A-Z]{3})\\,([A-Z]{4}) ";
-		String output = input.replaceAll(regex, "");
-		System.out.println(output);
-		
-		
+	
+	    
+		//Pattern regex = Pattern.compile(" ([A-Z]{3}) ([A-Z]{4})\\, ([A-Z]{3}) ([A-Z]{3})\\, ([A-Z]{3}) ([A-Z]{3}) ([A-Z]{4}) ");
+	             String regex=ReplaceAll("\\<.*?>","");
+	    
+	   
+	
 		Movie m1 = new Movie("Spancer", 0);
 		Movie m2 = new Movie("Speed", 1);
 		Movie m3 = new Movie("Blood Diamond",2);
@@ -25,6 +30,7 @@ public class Driver {
 		Rental r1 = new Rental(m1, 23);
 		Rental r2 = new Rental(m2,4);
 		Rental r3 = new Rental(m3,3);
+		
 		me.addRental(r1);
 		me.addRental(r2);
 		me2.addRental(r3);
@@ -32,4 +38,9 @@ public class Driver {
 		System.out.println(me2.statement());
 
 	}
-}
+
+	private static String ReplaceAll(String string, String string2) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
