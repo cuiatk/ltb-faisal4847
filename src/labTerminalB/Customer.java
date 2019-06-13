@@ -27,15 +27,26 @@ public class Customer
 		 * 
 		 */
 		
+		
 		/**
 		 * TODO 3		10 Marks
 		 * Provide suitable specification for statement method 
-		 */
+		 * @param nothing
+		 * @return   total bill.
+		 * This method constructing  statement  name of person.movies being rented, rental of that person.  
+		 * @return  statement 
+		 *  name of all movies which are being rented by that person
+		 * calculate prices, and rental points of that person.
+		 * 
+		
+	    */
+		
+		
 		public String statement() {
 		double totalAmount = 0;
 		int frequentRenterPoints = 0;
 		Enumeration<Rental> rentals = _rentals.elements();
-		String result = "Rental Record for " + getName() + "\n";
+		String TotalBill = "Rental Record for " + getName() + "\n";
 		
 		while (rentals.hasMoreElements()) {
 			
@@ -51,14 +62,16 @@ public class Customer
 			if ((Rent.getMovie().getPriceCode() == Movie.NEW_RELEASE)&&Rent.getDaysRented() > 1) frequentRenterPoints ++;
 			   //show figures for this rental
 			
-			result += "\t" + Rent.getMovie().getTitle()+ "\t" +String.valueOf(FrequentAmount) + "\n";
+			TotalBill += "\t" + Rent.getMovie().getTitle()+ "\t" +String.valueOf(FrequentAmount) + "\n";
 			totalAmount += FrequentAmount;
 		}
 		
 		 //add footer lines
-		 result += "Amount owed is " + String.valueOf(totalAmount) +"\n";
-		 result += "You earned " + String.valueOf(frequentRenterPoints)+" frequent renter points";
-		return result;
+		 TotalBill += "Amount owed is " + String.valueOf(totalAmount) +"\n";
+		 TotalBill += "You earned " + String.valueOf(frequentRenterPoints)+" frequent renter points";
+		 
+		return TotalBill;
 	}
 }
+
 
