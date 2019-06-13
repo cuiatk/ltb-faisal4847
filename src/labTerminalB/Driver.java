@@ -11,7 +11,8 @@ public class Driver {
 	 */
 	public static void main(String[] args) {
 		String input = "The <b>Good</b>, the <i>Bad</i>, and the <strong>Ugly</strong>";
-		String regex = "TODO 1";
+	//	String regex = "TODO1";
+	String 	regex=" ([A-Z]{4})\\,([A-Z]{3})\\,([A-Z]{4}) ";
 		String output = input.replaceAll(regex, "");
 		System.out.println(output);
 		
