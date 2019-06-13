@@ -46,6 +46,16 @@ public class CustomerTest {
 			assert false;
 		}
 	}
+	@Test
+	public void Emptytest() {
+		me2.addRental(r1);
+		me2.addRental(r2);
+		String output3 = "Rental Record for Allah Ditta \r\n" + "	Spancer	0\r\n" + "	Speed	0";
+		if(output3.equals(me2.statement()))
+		{
+			assert true;
+		}
+	}
 	
 	/*
 	 * TODO 2			10 Marks
@@ -55,3 +65,4 @@ public class CustomerTest {
 	
 
 }
+
